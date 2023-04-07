@@ -1,0 +1,3 @@
+[submodule "third_party/chernoengine2"]
+	path = third_party/chernoengine2
+	url = https://github.com/patrik-pastor/chernoengine2.git

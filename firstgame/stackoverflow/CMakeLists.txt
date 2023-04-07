@@ -1,0 +1,1 @@
+add_executable(emplace_back emplace_back.cpp)
