@@ -193,12 +193,26 @@ bool Level::CollisionTest() {
     return false;
 }
 
-void Level::GameOver() {
+void Level::Reset() {
+    game_over_ = false;
+
     player_.Reset();
 
     pillar_target_ = 30.0f;
     pillar_index_ = 0;
+    for(int i = 0; i < 5; i++){
+        CreatePillar(i, i * 10.0f);
+    }
 }
+
+void Level::GameOver() {
+    game_over_ = true;
+}
+
+bool Level::IsGameOver() const {
+    return game_over_;
+}
+
 
 
 } // firstgame

@@ -85,7 +85,7 @@ const glm::vec2& Player::GetPosition() const {
 
 void Player::Reset() {
     position_ = {-10.0f, 0.0f};
-    velocity_ = {9.0f, 0.0f};
+    velocity_ = {speed_x_, 0.0f};
 }
 
 int Player::GetScore() const {

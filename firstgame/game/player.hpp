@@ -31,7 +31,8 @@ public:
 private:
     chernoengine2::Ref<chernoengine2::Texture2D> ship_texture_;
     glm::vec2 position_ = {-10.0f, 0.0f};
-    glm::vec2 velocity_ = {9.0f, 0.0f};
+    float speed_x_ = 9.0f;
+    glm::vec2 velocity_ = {speed_x_, 0.0f};
 
     float engine_power_ = 0.5f;
     float gravity_ = 0.4f;

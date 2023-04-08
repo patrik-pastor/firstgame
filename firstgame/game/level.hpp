@@ -27,7 +27,11 @@ public:
 
     void OnRender();
 
+    void Reset();
+
     const Player& GetPlayer() const;
+
+    bool IsGameOver() const;
 
 private:
     void CreatePillar(int index, float offset);
@@ -37,6 +41,7 @@ private:
     void GameOver();
 
     Player player_;
+    bool game_over_ = false;
     chernoengine2::Ref<chernoengine2::Texture2D> triangle_texture;
     glm::vec3 pillar_hsv_ = {0.0f, 0.8f, 0.8f};
     std::vector<Pillar> pillars_;
